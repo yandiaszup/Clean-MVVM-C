@@ -11,7 +11,7 @@ protocol AuthenticationCoordinatorDelegate: AnyObject {
     func login()
 }
 
-class AuthenticationCoordinator: Coordinator, AuthenticationCoordinatorDelegate {
+class AuthenticationCoordinator: BaseCoordinator<ScreenState>, Coordinator, AuthenticationCoordinatorDelegate {
     
     var childCoordinators: [Coordinator] = []
     
@@ -19,6 +19,10 @@ class AuthenticationCoordinator: Coordinator, AuthenticationCoordinatorDelegate 
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+    }
+    
+    override func routeFrom(state: ScreenState) {
+        
     }
     
     func start() {

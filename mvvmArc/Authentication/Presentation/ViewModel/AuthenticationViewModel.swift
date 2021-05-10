@@ -20,35 +20,39 @@ enum ScreenState {
     case success
 }
 
-protocol AuthenticationViewModelInput {
-    func setupEventListener(publisher: PassthroughSubject<ScreenEvent, Never>)
-}
-
-protocol AuthenticationViewModelOutput {
-    var viewModelStatePublisher: PassthroughSubject<ScreenState, Never> { get }
-    var isButtonEnabledPublisher: PassthroughSubject<Bool, Never> { get }
-    var observable: Observable<String> { get }
-}
-
-protocol AuthenticationViewModelProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput { }
-
-class AuthenticationViewModel: AuthenticationViewModelProtocol {
+class AuthenticationViewModel: BaseViewModel<ScreenState, ScreenEvent> {
+    
+    override func setState(state: ScreenState) {
+        switch state {
+        case .error:
+            return
+        case .idle:
+            return
+        case .loading:
+            return
+        case .success:
+            return
+        }
+    }
+    
+    override func handleScreenEvent(_ event: ScreenEvent) {
+        switch event {
+        case .didTouchButton:
+            didTouchButton()
+        case .textChange(let value):
+            textDidChange(value: value)
+        }
+    }
     
     // MARK: Dependencies
     
     var authenticateUseCase: AuthenticateUseCaseProtocol? = AuthenticateUseCase()
     
-    weak var coordinator: AuthenticationCoordinatorDelegate?
-    
     // MARK: ScreenViewModelOutput
     
-    var observable: Observable<String> = Observable("")
     private(set) var isButtonEnabledPublisher = PassthroughSubject<Bool, Never>()
-    private(set) var viewModelStatePublisher = PassthroughSubject<ScreenState, Never>()
     
     // MARK: Properties
-    
-    private(set) var eventListener: AnyCancellable?
     
     private var isButtonEnabled: Bool = false {
         didSet {
@@ -66,15 +70,6 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
     // MARK: Functions
     
-    private func handleScreenEvent(_ event: ScreenEvent) {
-        switch event {
-        case .didTouchButton:
-            didTouchButton()
-        case .textChange(let value):
-            textDidChange(value: value)
-        }
-    }
-    
     private func textDidChange(value: String) {
         isButtonEnabled = !value.isEmpty
         observable.value = value
@@ -91,14 +86,6 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
                     self.state = .success
                 }
             }
-        )
-    }
-    
-    // MARK: ScreenViewModelInput
-    
-    func setupEventListener(publisher: PassthroughSubject<ScreenEvent, Never>) {
-        eventListener = publisher.sink(
-            receiveValue: { self.handleScreenEvent($0) }
         )
     }
 }

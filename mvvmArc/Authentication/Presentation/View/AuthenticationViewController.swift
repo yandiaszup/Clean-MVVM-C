@@ -26,7 +26,7 @@ class AuthenticationViewController: UIViewController {
     
     // MARK: Dependencies
     
-    var viewModel: AuthenticationViewModelProtocol?
+    var viewModel: BaseViewModel<ScreenState, ScreenEvent>?
     
     // MARK: Publishers
     
@@ -70,17 +70,17 @@ class AuthenticationViewController: UIViewController {
         viewModel?.setupEventListener(publisher: eventPublisher)
         
         //sink subscription
-        viewModel?.isButtonEnabledPublisher
-            .sink { value in
-                self.button.backgroundColor = value ? .red : .gray
-                self.button.isEnabled = value
-            }
-            .store(in: &subscriptions)
+//        viewModel?.isButtonEnabledPublisher
+//            .sink { value in
+//                self.button.backgroundColor = value ? .red : .gray
+//                self.button.isEnabled = value
+//            }
+//            .store(in: &subscriptions)
         
         //assign to key path subscription
-        viewModel?.isButtonEnabledPublisher
-            .assign(to: \.isEnabled, on: button)
-            .store(in: &subscriptions)
+//        viewModel?.isButtonEnabledPublisher
+//            .assign(to: \.isEnabled, on: button)
+//            .store(in: &subscriptions)
         
         viewModel?.viewModelStatePublisher
             .sink { state in
