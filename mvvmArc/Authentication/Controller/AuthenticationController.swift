@@ -7,7 +7,8 @@
 
 import Foundation
 
-class Controller: BaseController<ScreenState> {
-    func teste() {
+class Controller: BaseController<ScreenState, ControllerEvent> {
+    override func handle(action: ControllerEvent) {
+        
     }
 }

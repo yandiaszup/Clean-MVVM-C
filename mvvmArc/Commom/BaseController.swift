@@ -7,6 +7,10 @@
 
 import Foundation
 
-class BaseController<T> {
-    var model: SimpleModel<T>?
+class BaseController<T, A> {
+    private var model: SimpleModel<T, A>?
+    
+    func handle(action: A) {
+        fatalError("This method should be overridden")
+    }
 }

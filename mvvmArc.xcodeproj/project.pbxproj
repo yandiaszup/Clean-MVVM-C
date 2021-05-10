@@ -21,6 +21,9 @@
 		D7CC7BD02645D4F500A10383 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC7BCF2645D4F500A10383 /* BaseViewModel.swift */; };
 		D7CC7BD32645D64A00A10383 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC7BD22645D64A00A10383 /* BaseController.swift */; };
 		D7CC7BD726499E4600A10383 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC7BD626499E4600A10383 /* BaseCoordinator.swift */; };
+		D7CC7BDB2649DB7500A10383 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC7BDA2649DB7500A10383 /* ScreenState.swift */; };
+		D7CC7BDF2649DB8100A10383 /* ScreenEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC7BDE2649DB8100A10383 /* ScreenEvent.swift */; };
+		D7CC7BE22649DB9500A10383 /* ControllerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC7BE12649DB9500A10383 /* ControllerEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D7CC7BCF2645D4F500A10383 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D7CC7BD22645D64A00A10383 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D7CC7BD626499E4600A10383 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		D7CC7BDA2649DB7500A10383 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		D7CC7BDE2649DB8100A10383 /* ScreenEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEvent.swift; sourceTree = "<group>"; };
+		D7CC7BE12649DB9500A10383 /* ControllerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		A9660F7C2641DB4E006B2097 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D7CC7BD92649DB6900A10383 /* Model */,
 				D7CC7BCA2645D4AA00A10383 /* Controller */,
 				A9660F7F2641DB66006B2097 /* Data */,
 				A9660F7E2641DB62006B2097 /* Domain */,
@@ -179,6 +186,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D7CC7BD92649DB6900A10383 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7CC7BDA2649DB7500A10383 /* ScreenState.swift */,
+				D7CC7BDE2649DB8100A10383 /* ScreenEvent.swift */,
+				D7CC7BE12649DB9500A10383 /* ControllerEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,9 +270,12 @@
 				A9660F8F26446058006B2097 /* Coordinator.swift in Sources */,
 				A9660F8726441DC5006B2097 /* Observable.swift in Sources */,
 				A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */,
+				D7CC7BDB2649DB7500A10383 /* ScreenState.swift in Sources */,
+				D7CC7BDF2649DB8100A10383 /* ScreenEvent.swift in Sources */,
 				A9660F8D26442ACA006B2097 /* AuthenticationViewModel.swift in Sources */,
 				A9660F69264180AB006B2097 /* AppDelegate.swift in Sources */,
 				D7CC7BD726499E4600A10383 /* BaseCoordinator.swift in Sources */,
+				D7CC7BE22649DB9500A10383 /* ControllerEvent.swift in Sources */,
 				A9660F8B264425B5006B2097 /* AuthenticationRepository.swift in Sources */,
 				A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */,
 				D7CC7BD32645D64A00A10383 /* BaseController.swift in Sources */,

@@ -8,18 +8,18 @@
 import Foundation
 import Combine
 
-class SimpleModel<T> {
+class SimpleModel<T, A> {
+    weak var controller: BaseController<T, A>?
     // Devem ser sobrescritos
     func setState(state: T) {
         fatalError("This method should be overridden")
     }
 }
 
-class BaseViewModel<T, A>: SimpleModel<T> {
+class BaseViewModel<T, A, B>: SimpleModel<T, B> {
     
     private(set) var eventListener: AnyCancellable?
     var coordinator: BaseCoordinator<T>?
-    weak var controller: BaseController<T>?
     
     func setupEventListener(publisher: PassthroughSubject<A, Never>) {
         eventListener = publisher.sink(

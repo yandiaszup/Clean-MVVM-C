@@ -26,7 +26,7 @@ class AuthenticationViewController: UIViewController {
     
     // MARK: Dependencies
     
-    var viewModel: BaseViewModel<ScreenState, ScreenEvent>?
+    var viewModel: BaseViewModel<ScreenState, ScreenEvent, ControllerEvent>?
     
     // MARK: Publishers
     

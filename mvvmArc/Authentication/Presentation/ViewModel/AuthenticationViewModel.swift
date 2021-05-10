@@ -8,19 +8,7 @@
 import Foundation
 import Combine
 
-enum ScreenEvent {
-    case textChange(value: String)
-    case didTouchButton
-}
-
-enum ScreenState {
-    case idle
-    case loading
-    case error
-    case success
-}
-
-class AuthenticationViewModel: BaseViewModel<ScreenState, ScreenEvent> {
+class AuthenticationViewModel: BaseViewModel<ScreenState, ScreenEvent, ControllerEvent> {
     
     override func setState(state: ScreenState) {
         switch state {
@@ -31,6 +19,7 @@ class AuthenticationViewModel: BaseViewModel<ScreenState, ScreenEvent> {
         case .loading:
             return
         case .success:
+            controller?.handle(action: .tryLogin)
             return
         }
     }
