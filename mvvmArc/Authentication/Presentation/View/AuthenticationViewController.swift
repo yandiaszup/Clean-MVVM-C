@@ -31,10 +31,6 @@ class AuthenticationViewController: UIViewController {
     // MARK: Publishers
     
     private let eventPublisher = PassthroughSubject<ScreenEvent, Never>()
-    
-    // MARK: Subscribers
-    
-    private var subscriptions = Set<AnyCancellable>()
 
     override func loadView() {
         super.loadView()
@@ -70,23 +66,17 @@ class AuthenticationViewController: UIViewController {
         viewModel?.setupEventListener(publisher: eventPublisher)
         
         //sink subscription
-        viewModel?.isButtonEnabledPublisher
-            .sink { value in
-                self.button.backgroundColor = value ? .red : .gray
-                self.button.isEnabled = value
-            }
-            .store(in: &subscriptions)
+        viewModel?.isButtonEnabledPublisher.observe(on: self, observerBlock: { [weak self] value in
+            guard let self = self else { return }
+            self.button.backgroundColor = value ? .red : .gray
+            self.button.isEnabled = value
+        })
         
-        //assign to key path subscription
-        viewModel?.isButtonEnabledPublisher
-            .assign(to: \.isEnabled, on: button)
-            .store(in: &subscriptions)
-        
-        viewModel?.viewModelStatePublisher
-            .sink { state in
-                self.handleScreenStateChange(state)
-            }
-            .store(in: &subscriptions)
+        viewModel?.viewModelStatePublisher.observe(on: self, observerBlock: { [weak self] state in
+            guard let self = self else { return }
+            
+            self.handleScreenStateChange(state)
+        })
         
         //Observable aproach (Not using Combine)
         viewModel?.observable.bind(to: \.text, on: self)

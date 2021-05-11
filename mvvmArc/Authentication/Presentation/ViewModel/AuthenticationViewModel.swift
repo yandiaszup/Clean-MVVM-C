@@ -25,8 +25,8 @@ protocol AuthenticationViewModelInput {
 }
 
 protocol AuthenticationViewModelOutput {
-    var viewModelStatePublisher: PassthroughSubject<ScreenState, Never> { get }
-    var isButtonEnabledPublisher: PassthroughSubject<Bool, Never> { get }
+    var viewModelStatePublisher: Observable<ScreenState> { get }
+    var isButtonEnabledPublisher: Observable<Bool> { get }
     var observable: Observable<String> { get }
 }
 
@@ -43,8 +43,8 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     // MARK: ScreenViewModelOutput
     
     var observable: Observable<String> = Observable("")
-    private(set) var isButtonEnabledPublisher = PassthroughSubject<Bool, Never>()
-    private(set) var viewModelStatePublisher = PassthroughSubject<ScreenState, Never>()
+    private(set) var isButtonEnabledPublisher = Observable<Bool>(false)
+    private(set) var viewModelStatePublisher = Observable<ScreenState>(.idle)
     
     // MARK: Properties
     
@@ -52,13 +52,13 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
     private var isButtonEnabled: Bool = false {
         didSet {
-            isButtonEnabledPublisher.send(isButtonEnabled)
+            isButtonEnabledPublisher.value = isButtonEnabled
         }
     }
     
     private var state: ScreenState = .idle {
         didSet {
-            viewModelStatePublisher.send(state)
+            viewModelStatePublisher.value = state
         }
     }
     

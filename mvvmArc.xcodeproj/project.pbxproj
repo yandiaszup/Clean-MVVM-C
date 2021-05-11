@@ -17,7 +17,19 @@
 		A9660F8D26442ACA006B2097 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F8C26442ACA006B2097 /* AuthenticationViewModel.swift */; };
 		A9660F8F26446058006B2097 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F8E26446058006B2097 /* Coordinator.swift */; };
 		A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F90264460AD006B2097 /* AuthenticationCoordinator.swift */; };
+		A9660F9D2645B309006B2097 /* mvvmArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F9C2645B309006B2097 /* mvvmArcTests.swift */; };
+		A9660FAE2645B811006B2097 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9660F9F2645B309006B2097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9660F5D264180AB006B2097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9660F64264180AB006B2097;
+			remoteInfo = mvvmArc;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A9660F65264180AB006B2097 /* mvvmArc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmArc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +44,21 @@
 		A9660F8C26442ACA006B2097 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		A9660F8E26446058006B2097 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A9660F90264460AD006B2097 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		A9660F9A2645B309006B2097 /* mvvmArcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mvvmArcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9660F9C2645B309006B2097 /* mvvmArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmArcTests.swift; sourceTree = "<group>"; };
+		A9660F9E2645B309006B2097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A9660F62264180AB006B2097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9660F972645B309006B2097 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				A9660F67264180AB006B2097 /* mvvmArc */,
+				A9660F9B2645B309006B2097 /* mvvmArcTests */,
 				A9660F66264180AB006B2097 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				A9660F65264180AB006B2097 /* mvvmArc.app */,
+				A9660F9A2645B309006B2097 /* mvvmArcTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +184,80 @@
 			path = Commom;
 			sourceTree = "<group>";
 		};
+		A9660F9B2645B309006B2097 /* mvvmArcTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9660FA42645B333006B2097 /* AuthenticationTests */,
+				A9660F9C2645B309006B2097 /* mvvmArcTests.swift */,
+				A9660F9E2645B309006B2097 /* Info.plist */,
+			);
+			path = mvvmArcTests;
+			sourceTree = "<group>";
+		};
+		A9660FA42645B333006B2097 /* AuthenticationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9660FAA2645B7E1006B2097 /* Data */,
+				A9660FA92645B7DC006B2097 /* Domain */,
+				A9660FA62645B7C4006B2097 /* Presentation */,
+			);
+			path = AuthenticationTests;
+			sourceTree = "<group>";
+		};
+		A9660FA62645B7C4006B2097 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A9660FA82645B7D8006B2097 /* View */,
+				A9660FA72645B7CF006B2097 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A9660FA72645B7CF006B2097 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A9660FA82645B7D8006B2097 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9660FA92645B7DC006B2097 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A9660FAB2645B7E9006B2097 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A9660FAA2645B7E1006B2097 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A9660FAC2645B7F4006B2097 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A9660FAB2645B7E9006B2097 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A9660FAC2645B7F4006B2097 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +278,24 @@
 			productReference = A9660F65264180AB006B2097 /* mvvmArc.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A9660F992645B309006B2097 /* mvvmArcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9660FA12645B309006B2097 /* Build configuration list for PBXNativeTarget "mvvmArcTests" */;
+			buildPhases = (
+				A9660F962645B309006B2097 /* Sources */,
+				A9660F972645B309006B2097 /* Frameworks */,
+				A9660F982645B309006B2097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9660FA02645B309006B2097 /* PBXTargetDependency */,
+			);
+			name = mvvmArcTests;
+			productName = mvvmArcTests;
+			productReference = A9660F9A2645B309006B2097 /* mvvmArcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,6 +307,10 @@
 				TargetAttributes = {
 					A9660F64264180AB006B2097 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					A9660F992645B309006B2097 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = A9660F64264180AB006B2097;
 					};
 				};
 			};
@@ -207,6 +328,7 @@
 			projectRoot = "";
 			targets = (
 				A9660F64264180AB006B2097 /* mvvmArc */,
+				A9660F992645B309006B2097 /* mvvmArcTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +340,13 @@
 			files = (
 				A9660F75264180AE006B2097 /* LaunchScreen.storyboard in Resources */,
 				A9660F72264180AE006B2097 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9660F982645B309006B2097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +368,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9660F962645B309006B2097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9660FAE2645B811006B2097 /* AuthenticationViewModelTests.swift in Sources */,
+				A9660F9D2645B309006B2097 /* mvvmArcTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9660FA02645B309006B2097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9660F64264180AB006B2097 /* mvvmArc */;
+			targetProxy = A9660F9F2645B309006B2097 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A9660F73264180AE006B2097 /* LaunchScreen.storyboard */ = {
@@ -405,6 +551,44 @@
 			};
 			name = Release;
 		};
+		A9660FA22645B309006B2097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = mvvmArcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zup.mvvmArcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvvmArc.app/mvvmArc";
+			};
+			name = Debug;
+		};
+		A9660FA32645B309006B2097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = mvvmArcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zup.mvvmArcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mvvmArc.app/mvvmArc";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +606,15 @@
 			buildConfigurations = (
 				A9660F7A264180AE006B2097 /* Debug */,
 				A9660F7B264180AE006B2097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9660FA12645B309006B2097 /* Build configuration list for PBXNativeTarget "mvvmArcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9660FA22645B309006B2097 /* Debug */,
+				A9660FA32645B309006B2097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
