@@ -27,7 +27,6 @@ class BaseViewModel<T, A, B>: SimpleModel<T, B> {
         )
     }
     
-    var observable: Observable<String> = Observable("")
     private(set) var viewModelStatePublisher = PassthroughSubject<T, Never>()
 
     // Devem ser sobrescritos

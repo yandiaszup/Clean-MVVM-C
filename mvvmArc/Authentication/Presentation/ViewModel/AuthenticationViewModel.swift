@@ -8,7 +8,41 @@
 import Foundation
 import Combine
 
-class AuthenticationViewModel: BaseViewModel<ScreenState, ScreenEvent, ControllerEvent> {
+typealias ScreenViewModelProtocol = ScreenViewModelOutput & BaseViewModel<ScreenState, ScreenEvent, ControllerEvent>
+
+protocol ScreenViewModelOutput {
+    var isButtonEnabledPublisher: PassthroughSubject<Bool, Never> { get }
+    var observable: Observable<String> { get }
+}
+
+class AuthenticationViewModel: ScreenViewModelProtocol {
+    
+    // MARK: Dependencies
+    
+    var authenticateUseCase: AuthenticateUseCaseProtocol? = AuthenticateUseCase()
+    
+    // MARK: ScreenViewModelOutput
+    
+    private(set) var isButtonEnabledPublisher = PassthroughSubject<Bool, Never>()
+    private(set) var observable: Observable<String> = .init("")
+    
+    // MARK: Properties
+    
+    private var isButtonEnabled: Bool = false {
+        didSet {
+            isButtonEnabledPublisher.send(isButtonEnabled)
+        }
+    }
+    
+    private var state: ScreenState = .idle {
+        didSet {
+            viewModelStatePublisher.send(state)
+        }
+    }
+    
+    private var user: String = ""
+    
+    // MARK: BaseViewModel
     
     override func setState(state: ScreenState) {
         switch state {
@@ -32,30 +66,6 @@ class AuthenticationViewModel: BaseViewModel<ScreenState, ScreenEvent, Controlle
             textDidChange(value: value)
         }
     }
-    
-    // MARK: Dependencies
-    
-    var authenticateUseCase: AuthenticateUseCaseProtocol? = AuthenticateUseCase()
-    
-    // MARK: ScreenViewModelOutput
-    
-    private(set) var isButtonEnabledPublisher = PassthroughSubject<Bool, Never>()
-    
-    // MARK: Properties
-    
-    private var isButtonEnabled: Bool = false {
-        didSet {
-            isButtonEnabledPublisher.send(isButtonEnabled)
-        }
-    }
-    
-    private var state: ScreenState = .idle {
-        didSet {
-            viewModelStatePublisher.send(state)
-        }
-    }
-    
-    private var user: String = ""
     
     // MARK: Functions
     
