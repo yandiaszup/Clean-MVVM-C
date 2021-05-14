@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let authCoordinator = AuthenticationCoordinator(navigationController: UINavigationController())
         
         authCoordinator.navigationController.isNavigationBarHidden = true
-        window?.rootViewController = authCoordinator.navigationController
+        window?.rootViewController = UIHostingController(rootView: AuthenticationView(viewModel: AuthenticationViewModel()))
         window?.makeKeyAndVisible()
         
         authCoordinator.start()

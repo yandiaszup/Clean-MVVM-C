@@ -27,12 +27,12 @@ protocol AuthenticationViewModelInput {
 protocol AuthenticationViewModelOutput {
     var viewModelStatePublisher: Observable<ScreenState> { get }
     var isButtonEnabledPublisher: Observable<Bool> { get }
-    var observable: Observable<String> { get }
+    var test: String { get }
 }
 
 protocol AuthenticationViewModelProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput { }
 
-class AuthenticationViewModel: AuthenticationViewModelProtocol {
+class AuthenticationViewModel: AuthenticationViewModelProtocol, ObservableObject {
     
     // MARK: Dependencies
     
@@ -42,9 +42,10 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
     // MARK: ScreenViewModelOutput
     
-    var observable: Observable<String> = Observable("")
     private(set) var isButtonEnabledPublisher = Observable<Bool>(false)
     private(set) var viewModelStatePublisher = Observable<ScreenState>(.idle)
+    
+    @Published var test: String = "oi"
     
     // MARK: Properties
     
@@ -77,11 +78,11 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
     private func textDidChange(value: String) {
         isButtonEnabled = !value.isEmpty
-        observable.value = value
         user = value
     }
     
     private func didTouchButton() {
+        test = test + "i"
         state = .loading
         authenticateUseCase?.execute(
             user: user,

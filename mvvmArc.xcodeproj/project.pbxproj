@@ -19,6 +19,7 @@
 		A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F90264460AD006B2097 /* AuthenticationCoordinator.swift */; };
 		A9660F9D2645B309006B2097 /* mvvmArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F9C2645B309006B2097 /* mvvmArcTests.swift */; };
 		A9660FAE2645B811006B2097 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */; };
+		A992CACE264F0CC700BE3270 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992CACD264F0CC700BE3270 /* AuthenticationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A9660F9C2645B309006B2097 /* mvvmArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmArcTests.swift; sourceTree = "<group>"; };
 		A9660F9E2645B309006B2097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		A992CACD264F0CC700BE3270 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */,
+				A992CACD264F0CC700BE3270 /* AuthenticationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */,
 				A9660F8D26442ACA006B2097 /* AuthenticationViewModel.swift in Sources */,
 				A9660F69264180AB006B2097 /* AppDelegate.swift in Sources */,
+				A992CACE264F0CC700BE3270 /* AuthenticationView.swift in Sources */,
 				A9660F8B264425B5006B2097 /* AuthenticationRepository.swift in Sources */,
 				A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */,
 				A9660F892644258E006B2097 /* AuthenticationUseCase.swift in Sources */,

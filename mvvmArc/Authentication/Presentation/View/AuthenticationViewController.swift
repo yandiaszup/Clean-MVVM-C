@@ -77,12 +77,6 @@ class AuthenticationViewController: UIViewController {
             
             self.handleScreenStateChange(state)
         })
-        
-        //Observable aproach (Not using Combine)
-        viewModel?.observable.bind(to: \.text, on: self)
-        viewModel?.observable.observe(on: self) { value in
-            print(value)
-        }
     }
     
     private func handleScreenStateChange(_ state: ScreenState) {

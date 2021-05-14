@@ -7,6 +7,54 @@
 
 import Foundation
 
+// MARK: @ObservableValue
+
+@propertyWrapper struct ObservableValue<Value> {
+    
+    private var observable: Observable<Value>
+    
+    var projectedValue: Observable<Value> { observable }
+    
+    var wrappedValue: Value {
+        get {
+            observable.value
+        }
+        set {
+            observable.value = newValue
+        }
+    }
+    
+    init(wrappedValue: Value) {
+        observable = Observable<Value>(wrappedValue)
+    }
+}
+
+// MARK: @ObservableValue use example
+
+class ObservableTestClass {
+    private var a = A()
+    
+    init() {
+        a.$a.observe(on: self) { value in
+            print(value)
+        }
+    }
+    
+    func test() {
+        a.change()
+    }
+}
+
+private class A {
+    @ObservableValue var a: String = ""
+    
+    func change() {
+        a = a + "1"
+    }
+}
+
+// MARK: Observable
+
 public final class Observable<Value> {
     
     struct Observer<Value> {
@@ -36,7 +84,9 @@ public final class Observable<Value> {
         to keypath: ReferenceWritableKeyPath<Object, Value>,
         on observer: Object
     ) {
-        observe(on: observer) { [weak observer] in observer?[keyPath: keypath] = $0 }
+        observe(on: observer) {
+            [weak observer] in observer?[keyPath: keypath] = $0
+        }
     }
     
     public func remove(observer: AnyObject) {
