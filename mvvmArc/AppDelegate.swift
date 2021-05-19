@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let authCoordinator = AuthenticationCoordinator(navigationController: UINavigationController())
         
         authCoordinator.navigationController.isNavigationBarHidden = true
-        window?.rootViewController = UIHostingController(rootView: AuthenticationView(viewModel: AuthenticationViewModel()))
+        window?.rootViewController = authCoordinator.navigationController
         window?.makeKeyAndVisible()
         
         authCoordinator.start()

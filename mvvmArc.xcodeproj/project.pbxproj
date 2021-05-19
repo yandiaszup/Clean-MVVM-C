@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39EB395DAB7F66D4B2B7C608 /* Pods_mvvmArcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC56822DCB1DFCCDE18876C0 /* Pods_mvvmArcTests.framework */; };
+		8A0D8D250DB132C0E3FE93C4 /* Pods_mvvmArc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8275E73644D3400D97EFF1A1 /* Pods_mvvmArc.framework */; };
 		A9660F69264180AB006B2097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F68264180AB006B2097 /* AppDelegate.swift */; };
 		A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */; };
 		A9660F72264180AE006B2097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9660F71264180AE006B2097 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F90264460AD006B2097 /* AuthenticationCoordinator.swift */; };
 		A9660F9D2645B309006B2097 /* mvvmArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F9C2645B309006B2097 /* mvvmArcTests.swift */; };
 		A9660FAE2645B811006B2097 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */; };
+		A96A20972652E8E600DA237A /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A20962652E8E600DA237A /* ButtonView.swift */; };
+		A96A20A72654526100DA237A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A20A62654526100DA237A /* TextFieldView.swift */; };
 		A992CACE264F0CC700BE3270 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992CACD264F0CC700BE3270 /* AuthenticationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		147FB88A334982A15C00B5EB /* Pods-mvvmArcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArcTests.debug.xcconfig"; path = "Target Support Files/Pods-mvvmArcTests/Pods-mvvmArcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B387A8616BB38E24E24BF4D /* Pods-mvvmArc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArc.release.xcconfig"; path = "Target Support Files/Pods-mvvmArc/Pods-mvvmArc.release.xcconfig"; sourceTree = "<group>"; };
+		73F5B3614F7DD74D053F8AD3 /* Pods-mvvmArcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArcTests.release.xcconfig"; path = "Target Support Files/Pods-mvvmArcTests/Pods-mvvmArcTests.release.xcconfig"; sourceTree = "<group>"; };
+		8275E73644D3400D97EFF1A1 /* Pods_mvvmArc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvmArc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9660F65264180AB006B2097 /* mvvmArc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmArc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9660F68264180AB006B2097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +57,11 @@
 		A9660F9C2645B309006B2097 /* mvvmArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmArcTests.swift; sourceTree = "<group>"; };
 		A9660F9E2645B309006B2097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		A96A20962652E8E600DA237A /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		A96A20A62654526100DA237A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		A992CACD264F0CC700BE3270 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		CC56822DCB1DFCCDE18876C0 /* Pods_mvvmArcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvmArcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB58A4D700CFA70CBB866218 /* Pods-mvvmArc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArc.debug.xcconfig"; path = "Target Support Files/Pods-mvvmArc/Pods-mvvmArc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0D8D250DB132C0E3FE93C4 /* Pods_mvvmArc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,18 +77,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EB395DAB7F66D4B2B7C608 /* Pods_mvvmArcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C15639B53AF658539CD4315 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB58A4D700CFA70CBB866218 /* Pods-mvvmArc.debug.xcconfig */,
+				4B387A8616BB38E24E24BF4D /* Pods-mvvmArc.release.xcconfig */,
+				147FB88A334982A15C00B5EB /* Pods-mvvmArcTests.debug.xcconfig */,
+				73F5B3614F7DD74D053F8AD3 /* Pods-mvvmArcTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A9660F5C264180AB006B2097 = {
 			isa = PBXGroup;
 			children = (
 				A9660F67264180AB006B2097 /* mvvmArc */,
 				A9660F9B2645B309006B2097 /* mvvmArcTests */,
 				A9660F66264180AB006B2097 /* Products */,
+				3C15639B53AF658539CD4315 /* Pods */,
+				FD60484DB8CB4B69F2F92DD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +169,8 @@
 			children = (
 				A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */,
 				A992CACD264F0CC700BE3270 /* AuthenticationView.swift */,
+				A96A20962652E8E600DA237A /* ButtonView.swift */,
+				A96A20A62654526100DA237A /* TextFieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +290,15 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		FD60484DB8CB4B69F2F92DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8275E73644D3400D97EFF1A1 /* Pods_mvvmArc.framework */,
+				CC56822DCB1DFCCDE18876C0 /* Pods_mvvmArcTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9660F79264180AE006B2097 /* Build configuration list for PBXNativeTarget "mvvmArc" */;
 			buildPhases = (
+				CDBBA25A62B17F6E9C32B7DF /* [CP] Check Pods Manifest.lock */,
 				A9660F61264180AB006B2097 /* Sources */,
 				A9660F62264180AB006B2097 /* Frameworks */,
 				A9660F63264180AB006B2097 /* Resources */,
+				E8044E5589B19F7C1851EBEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +325,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9660FA12645B309006B2097 /* Build configuration list for PBXNativeTarget "mvvmArcTests" */;
 			buildPhases = (
+				9A6CBE20B4BC9AD42A25289B /* [CP] Check Pods Manifest.lock */,
 				A9660F962645B309006B2097 /* Sources */,
 				A9660F972645B309006B2097 /* Frameworks */,
 				A9660F982645B309006B2097 /* Resources */,
@@ -355,6 +396,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A6CBE20B4BC9AD42A25289B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvvmArcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDBBA25A62B17F6E9C32B7DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvvmArc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8044E5589B19F7C1851EBEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvvmArc/Pods-mvvmArc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvvmArc/Pods-mvvmArc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mvvmArc/Pods-mvvmArc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9660F61264180AB006B2097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -363,6 +468,8 @@
 				A9660F8F26446058006B2097 /* Coordinator.swift in Sources */,
 				A9660F8726441DC5006B2097 /* Observable.swift in Sources */,
 				A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */,
+				A96A20A72654526100DA237A /* TextFieldView.swift in Sources */,
+				A96A20972652E8E600DA237A /* ButtonView.swift in Sources */,
 				A9660F8D26442ACA006B2097 /* AuthenticationViewModel.swift in Sources */,
 				A9660F69264180AB006B2097 /* AppDelegate.swift in Sources */,
 				A992CACE264F0CC700BE3270 /* AuthenticationView.swift in Sources */,
@@ -521,6 +628,7 @@
 		};
 		A9660F7A264180AE006B2097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB58A4D700CFA70CBB866218 /* Pods-mvvmArc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -539,6 +647,7 @@
 		};
 		A9660F7B264180AE006B2097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B387A8616BB38E24E24BF4D /* Pods-mvvmArc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -557,6 +666,7 @@
 		};
 		A9660FA22645B309006B2097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147FB88A334982A15C00B5EB /* Pods-mvvmArcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +686,7 @@
 		};
 		A9660FA32645B309006B2097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F5B3614F7DD74D053F8AD3 /* Pods-mvvmArcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

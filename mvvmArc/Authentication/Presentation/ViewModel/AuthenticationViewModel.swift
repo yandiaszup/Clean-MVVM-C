@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 enum ScreenEvent {
     case textChange(value: String)
@@ -20,17 +19,11 @@ enum ScreenState {
     case success
 }
 
-protocol AuthenticationViewModelInput {
-    func setupEventListener(publisher: PassthroughSubject<ScreenEvent, Never>)
+protocol AuthenticationViewModelProtocol {
+    func handle(screenEvent: ScreenEvent)
+    var isButtonEnabledObserver: Observable<Bool> { get }
+    var stateObserver: Observable<ScreenState> { get }
 }
-
-protocol AuthenticationViewModelOutput {
-    var viewModelStatePublisher: Observable<ScreenState> { get }
-    var isButtonEnabledPublisher: Observable<Bool> { get }
-    var test: String { get }
-}
-
-protocol AuthenticationViewModelProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput { }
 
 class AuthenticationViewModel: AuthenticationViewModelProtocol, ObservableObject {
     
@@ -40,28 +33,15 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol, ObservableObject
     
     weak var coordinator: AuthenticationCoordinatorDelegate?
     
-    // MARK: ScreenViewModelOutput
+    // MARK: Observers
     
-    private(set) var isButtonEnabledPublisher = Observable<Bool>(false)
-    private(set) var viewModelStatePublisher = Observable<ScreenState>(.idle)
-    
-    @Published var test: String = "oi"
+    var isButtonEnabledObserver: Observable<Bool> { $isButtonEnabled }
+    var stateObserver: Observable<ScreenState> { $state }
     
     // MARK: Properties
     
-    private(set) var eventListener: AnyCancellable?
-    
-    private var isButtonEnabled: Bool = false {
-        didSet {
-            isButtonEnabledPublisher.value = isButtonEnabled
-        }
-    }
-    
-    private var state: ScreenState = .idle {
-        didSet {
-            viewModelStatePublisher.value = state
-        }
-    }
+    @ObservableValue private var isButtonEnabled: Bool = false
+    @ObservableValue private var state: ScreenState = .idle
     
     private var user: String = ""
     
@@ -82,7 +62,6 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol, ObservableObject
     }
     
     private func didTouchButton() {
-        test = test + "i"
         state = .loading
         authenticateUseCase?.execute(
             user: user,
@@ -97,9 +76,7 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol, ObservableObject
     
     // MARK: ScreenViewModelInput
     
-    func setupEventListener(publisher: PassthroughSubject<ScreenEvent, Never>) {
-        eventListener = publisher.sink(
-            receiveValue: { self.handleScreenEvent($0) }
-        )
+    func handle(screenEvent: ScreenEvent) {
+        self.handleScreenEvent(screenEvent)
     }
 }

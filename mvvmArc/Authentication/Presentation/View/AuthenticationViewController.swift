@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 //MARK: - View
 
@@ -18,19 +17,11 @@ class AuthenticationViewController: UIViewController {
     private let textField = UITextField()
     private let state = UILabel()
     
-    var text = "" {
-        didSet {
-            print(text)
-        }
-    }
-    
     // MARK: Dependencies
     
     var viewModel: AuthenticationViewModelProtocol?
     
-    // MARK: Publishers
-    
-    private let eventPublisher = PassthroughSubject<ScreenEvent, Never>()
+    // MARK: Functions
 
     override func loadView() {
         super.loadView()
@@ -63,20 +54,25 @@ class AuthenticationViewController: UIViewController {
     }
     
     private func setupBindings() {
-        viewModel?.setupEventListener(publisher: eventPublisher)
+        viewModel?.isButtonEnabledObserver.observe(
+            on: self,
+            observerBlock: { [weak self] isEnable in
+                guard let self = self else { return }
+                
+                self.button.backgroundColor = isEnable ? .red : .gray
+                self.button.isEnabled = isEnable
+            }
+        )
         
-        //sink subscription
-        viewModel?.isButtonEnabledPublisher.observe(on: self, observerBlock: { [weak self] value in
-            guard let self = self else { return }
-            self.button.backgroundColor = value ? .red : .gray
-            self.button.isEnabled = value
-        })
-        
-        viewModel?.viewModelStatePublisher.observe(on: self, observerBlock: { [weak self] state in
-            guard let self = self else { return }
-            
-            self.handleScreenStateChange(state)
-        })
+        viewModel?.stateObserver.observe(
+            on: self,
+            observerBlock: {
+                [weak self] state in
+                guard let self = self else { return }
+                
+                self.handleScreenStateChange(state)
+            }
+        )
     }
     
     private func handleScreenStateChange(_ state: ScreenState) {
@@ -95,11 +91,11 @@ class AuthenticationViewController: UIViewController {
     // MARK: Screen Events
     
     @objc func textfieldChange() {
-        eventPublisher.send(.textChange(value: textField.text ?? ""))
+        viewModel?.handle(screenEvent: .textChange(value: textField.text ?? ""))
     }
     
     @objc func didTouchButton() {
-        eventPublisher.send(.didTouchButton)
+        viewModel?.handle(screenEvent: .didTouchButton)
     }
 }
 

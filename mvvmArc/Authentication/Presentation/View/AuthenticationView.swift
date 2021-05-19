@@ -13,22 +13,40 @@ struct AuthenticationView<Model>: View where Model: AuthenticationViewModelProto
     @ObservedObject var viewModel: Model
     
     var ob = ObservableTestClass()
+    @State var text: String = "" {
+        didSet {
+            print(text)
+        }
+    }
     
     var eventPublisher = PassthroughSubject<ScreenEvent, Never>()
     
     init(viewModel: Model) {
         self.viewModel = viewModel
-        self.viewModel.setupEventListener(publisher: eventPublisher)
+//        self.viewModel.setupEventListener(publisher: eventPublisher)
     }
     
     var body: some View {
         VStack {
-            Text(viewModel.test)
+//            Text(viewModel.test)
             Button("oi") {
                 eventPublisher.send(.didTouchButton)
                 test()
             }
+            DSButton(title: "primary", kind: .primary)
+                .frame(height: 60)
+                .padding()
+            DSButton(title: "secondary", kind: .secondary)
+                .frame(height: 60)
+                .padding()
+            DSButton(title: "tertiary", kind: .tertiary)
+                .frame(height: 60)
+                .padding()
+            DSTextField(hint: "hint", text: $text)
+                .frame(height: 60)
+            Text(text)
         }
+        
     }
     
     func test() {

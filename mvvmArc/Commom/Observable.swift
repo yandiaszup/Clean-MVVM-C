@@ -35,7 +35,7 @@ class ObservableTestClass {
     private var a = A()
     
     init() {
-        a.$a.observe(on: self) { value in
+        a.$value.observe(on: self) { value in
             print(value)
         }
     }
@@ -46,10 +46,10 @@ class ObservableTestClass {
 }
 
 private class A {
-    @ObservableValue var a: String = ""
+    @ObservableValue var value: String = ""
     
     func change() {
-        a = a + "1"
+        value = value + "1"
     }
 }
 

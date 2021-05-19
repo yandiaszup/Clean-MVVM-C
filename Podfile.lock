@@ -1,0 +1,21 @@
+PODS:
+  - Beaxel (0.1.0)
+
+DEPENDENCIES:
+  - "Beaxel (from `git@github.com:ZupIT/mfi-beaxel.git`)"
+
+EXTERNAL SOURCES:
+  Beaxel:
+    :git: "git@github.com:ZupIT/mfi-beaxel.git"
+
+CHECKOUT OPTIONS:
+  Beaxel:
+    :commit: 7edb069251da12ed5b77e251a839766454de4041
+    :git: "git@github.com:ZupIT/mfi-beaxel.git"
+
+SPEC CHECKSUMS:
+  Beaxel: 9d26421f2bb98b92474beb4a7c9127e4dbafaa10
+
+PODFILE CHECKSUM: 73f4af0e5f608eefc7813caf8a68e6df8233c32d
+
+COCOAPODS: 1.10.1
