@@ -22,11 +22,23 @@ protocol ViewModelProtocol: class {
     func setState(state: ScreenState)
 }
 
-protocol AuthenticationViewModelViewProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput {}
+//protocol AuthenticationViewModelViewProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput {}
 
-protocol AuthenticationViewModelProtocol: AuthenticationViewModelViewProtocol, ViewModelProtocol { }
+protocol AuthenticationViewModelViewProtocol: ViewModelProtocol {}
 
-class AuthenticationViewModel: AuthenticationViewModelProtocol {
+//protocol AuthenticationViewModelProtocol: AuthenticationViewModelViewProtocol, ViewModelProtocol {
+//    func handle(screenEvent: ScreenEvent)
+//    var isButtonEnabledObserver: Observable<Bool> { get }
+//    var stateObserver: Observable<ScreenState> { get }
+//}
+
+protocol AuthenticationViewModelProtocol {
+    func handle(screenEvent: ScreenEvent)
+    var isButtonEnabledObserver: Observable<Bool> { get }
+    var stateObserver: Observable<ScreenState> { get }
+}
+
+class AuthenticationViewModel: AuthenticationViewModelViewProtocol, AuthenticationViewModelProtocol, ObservableObject {
     
     func setState(state: ScreenState) {
         switch state {
@@ -42,27 +54,15 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     var coordinator: AuthenticationCoordinatorDelegate?
     var controller: AuthenticationControllerProtocol?
     
-    // MARK: ScreenViewModelOutput
+    // MARK: Observers
     
-    var observable: Observable<String> = Observable("")
-    private(set) var isButtonEnabledPublisher = Observable<Bool>(false)
-    private(set) var viewModelStatePublisher = Observable<ScreenState>(.idle)
+    var isButtonEnabledObserver: Observable<Bool> { $isButtonEnabled }
+    var stateObserver: Observable<ScreenState> { $state }
     
     // MARK: Properties
     
-    private(set) var eventListener: AnyCancellable?
-    
-    private var isButtonEnabled: Bool = false {
-        didSet {
-            isButtonEnabledPublisher.value = isButtonEnabled
-        }
-    }
-    
-    private var state: ScreenState = .idle {
-        didSet {
-            viewModelStatePublisher.value = state
-        }
-    }
+    @ObservableValue private var isButtonEnabled: Bool = false
+    @ObservableValue private var state: ScreenState = .idle
     
     private var user: String = ""
     
@@ -79,7 +79,6 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
     private func textDidChange(value: String) {
         isButtonEnabled = !value.isEmpty
-        observable.value = value
         user = value
     }
     
@@ -99,9 +98,7 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
     // MARK: ScreenViewModelInput
     
-    func setupEventListener(publisher: PassthroughSubject<ScreenEvent, Never>) {
-        eventListener = publisher.sink(
-            receiveValue: { self.handleScreenEvent($0) }
-        )
+    func handle(screenEvent: ScreenEvent) {
+        self.handleScreenEvent(screenEvent)
     }
 }

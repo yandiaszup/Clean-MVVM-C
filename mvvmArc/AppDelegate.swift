@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

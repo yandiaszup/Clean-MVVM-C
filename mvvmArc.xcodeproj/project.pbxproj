@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39EB395DAB7F66D4B2B7C608 /* Pods_mvvmArcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC56822DCB1DFCCDE18876C0 /* Pods_mvvmArcTests.framework */; };
+		8A0D8D250DB132C0E3FE93C4 /* Pods_mvvmArc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8275E73644D3400D97EFF1A1 /* Pods_mvvmArc.framework */; };
 		A9660F69264180AB006B2097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F68264180AB006B2097 /* AppDelegate.swift */; };
 		A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */; };
 		A9660F72264180AE006B2097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9660F71264180AE006B2097 /* Assets.xcassets */; };
@@ -30,6 +32,9 @@
 		D7E06CF22652FADB009C5923 /* FactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06CF12652FADB009C5923 /* FactoryProtocol.swift */; };
 		D7E06CFA26546674009C5923 /* AuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06CF926546674009C5923 /* AuthenticationFactory.swift */; };
 		D7E06D0126546A54009C5923 /* MoodUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06D0026546A54009C5923 /* MoodUseCase.swift */; };
+		D7E06D182656A32F009C5923 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06D172656A32F009C5923 /* TextFieldView.swift */; };
+		D7E06D1C2656A332009C5923 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06D1B2656A332009C5923 /* ButtonView.swift */; };
+		D7E06D202656A334009C5923 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06D1F2656A334009C5923 /* AuthenticationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		147FB88A334982A15C00B5EB /* Pods-mvvmArcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArcTests.debug.xcconfig"; path = "Target Support Files/Pods-mvvmArcTests/Pods-mvvmArcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B387A8616BB38E24E24BF4D /* Pods-mvvmArc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArc.release.xcconfig"; path = "Target Support Files/Pods-mvvmArc/Pods-mvvmArc.release.xcconfig"; sourceTree = "<group>"; };
+		73F5B3614F7DD74D053F8AD3 /* Pods-mvvmArcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArcTests.release.xcconfig"; path = "Target Support Files/Pods-mvvmArcTests/Pods-mvvmArcTests.release.xcconfig"; sourceTree = "<group>"; };
+		8275E73644D3400D97EFF1A1 /* Pods_mvvmArc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvmArc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9660F65264180AB006B2097 /* mvvmArc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvmArc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9660F68264180AB006B2097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +68,7 @@
 		A9660F9C2645B309006B2097 /* mvvmArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmArcTests.swift; sourceTree = "<group>"; };
 		A9660F9E2645B309006B2097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		CC56822DCB1DFCCDE18876C0 /* Pods_mvvmArcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvmArcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7980215264C6EA800B6FA6B /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		D798021C264C6F7000B6FA6B /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		D7980238264DA7F500B6FA6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -70,6 +80,10 @@
 		D7E06CF12652FADB009C5923 /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
 		D7E06CF926546674009C5923 /* AuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFactory.swift; sourceTree = "<group>"; };
 		D7E06D0026546A54009C5923 /* MoodUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodUseCase.swift; sourceTree = "<group>"; };
+		D7E06D172656A32F009C5923 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		D7E06D1B2656A332009C5923 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		D7E06D1F2656A334009C5923 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		EB58A4D700CFA70CBB866218 /* Pods-mvvmArc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvmArc.debug.xcconfig"; path = "Target Support Files/Pods-mvvmArc/Pods-mvvmArc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0D8D250DB132C0E3FE93C4 /* Pods_mvvmArc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,18 +99,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EB395DAB7F66D4B2B7C608 /* Pods_mvvmArcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C15639B53AF658539CD4315 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB58A4D700CFA70CBB866218 /* Pods-mvvmArc.debug.xcconfig */,
+				4B387A8616BB38E24E24BF4D /* Pods-mvvmArc.release.xcconfig */,
+				147FB88A334982A15C00B5EB /* Pods-mvvmArcTests.debug.xcconfig */,
+				73F5B3614F7DD74D053F8AD3 /* Pods-mvvmArcTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A9660F5C264180AB006B2097 = {
 			isa = PBXGroup;
 			children = (
 				A9660F67264180AB006B2097 /* mvvmArc */,
 				A9660F9B2645B309006B2097 /* mvvmArcTests */,
 				A9660F66264180AB006B2097 /* Products */,
+				3C15639B53AF658539CD4315 /* Pods */,
+				FD60484DB8CB4B69F2F92DD4 /* Frameworks */,
+				D7E06D0A2656969D009C5923 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +326,9 @@
 		D798022A264C6FA100B6FA6B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7E06D1F2656A334009C5923 /* AuthenticationView.swift */,
+				D7E06D1B2656A332009C5923 /* ButtonView.swift */,
+				D7E06D172656A32F009C5923 /* TextFieldView.swift */,
 				A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */,
 			);
 			path = View;
@@ -395,6 +428,22 @@
 			path = Mood;
 			sourceTree = "<group>";
 		};
+		D7E06D0A2656969D009C5923 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		FD60484DB8CB4B69F2F92DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8275E73644D3400D97EFF1A1 /* Pods_mvvmArc.framework */,
+				CC56822DCB1DFCCDE18876C0 /* Pods_mvvmArcTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,9 +451,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9660F79264180AE006B2097 /* Build configuration list for PBXNativeTarget "mvvmArc" */;
 			buildPhases = (
+				CDBBA25A62B17F6E9C32B7DF /* [CP] Check Pods Manifest.lock */,
 				A9660F61264180AB006B2097 /* Sources */,
 				A9660F62264180AB006B2097 /* Frameworks */,
 				A9660F63264180AB006B2097 /* Resources */,
+				E8044E5589B19F7C1851EBEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,6 +470,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9660FA12645B309006B2097 /* Build configuration list for PBXNativeTarget "mvvmArcTests" */;
 			buildPhases = (
+				9A6CBE20B4BC9AD42A25289B /* [CP] Check Pods Manifest.lock */,
 				A9660F962645B309006B2097 /* Sources */,
 				A9660F972645B309006B2097 /* Frameworks */,
 				A9660F982645B309006B2097 /* Resources */,
@@ -489,6 +541,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A6CBE20B4BC9AD42A25289B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvvmArcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDBBA25A62B17F6E9C32B7DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvvmArc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8044E5589B19F7C1851EBEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvvmArc/Pods-mvvmArc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvvmArc/Pods-mvvmArc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mvvmArc/Pods-mvvmArc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9660F61264180AB006B2097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -496,6 +612,7 @@
 			files = (
 				D7980216264C6EA800B6FA6B /* AuthenticationController.swift in Sources */,
 				D798021D264C6F7000B6FA6B /* AuthenticationModel.swift in Sources */,
+				D7E06D1C2656A332009C5923 /* ButtonView.swift in Sources */,
 				D7980251264DD2F800B6FA6B /* HomeCoordinator.swift in Sources */,
 				D798024D264DBEB700B6FA6B /* HomeController.swift in Sources */,
 				A9660F8F26446058006B2097 /* Coordinator.swift in Sources */,
@@ -504,6 +621,7 @@
 				A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */,
 				D7980239264DA7F500B6FA6B /* HomeView.swift in Sources */,
 				D7E06CFA26546674009C5923 /* AuthenticationFactory.swift in Sources */,
+				D7E06D182656A32F009C5923 /* TextFieldView.swift in Sources */,
 				D7E06CF22652FADB009C5923 /* FactoryProtocol.swift in Sources */,
 				A9660F8D26442ACA006B2097 /* AuthenticationViewModel.swift in Sources */,
 				D7980245264DAA3C00B6FA6B /* HomeViewModel.swift in Sources */,
@@ -513,6 +631,7 @@
 				D7E06CEC2652FA98009C5923 /* HomeFactory.swift in Sources */,
 				A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */,
 				A9660F892644258E006B2097 /* AuthenticationUseCase.swift in Sources */,
+				D7E06D202656A334009C5923 /* AuthenticationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +784,7 @@
 		};
 		A9660F7A264180AE006B2097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB58A4D700CFA70CBB866218 /* Pods-mvvmArc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -685,6 +805,7 @@
 		};
 		A9660F7B264180AE006B2097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B387A8616BB38E24E24BF4D /* Pods-mvvmArc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -705,6 +826,7 @@
 		};
 		A9660FA22645B309006B2097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147FB88A334982A15C00B5EB /* Pods-mvvmArcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -724,6 +846,7 @@
 		};
 		A9660FA32645B309006B2097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F5B3614F7DD74D053F8AD3 /* Pods-mvvmArcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
