@@ -19,6 +19,17 @@
 		A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F90264460AD006B2097 /* AuthenticationCoordinator.swift */; };
 		A9660F9D2645B309006B2097 /* mvvmArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660F9C2645B309006B2097 /* mvvmArcTests.swift */; };
 		A9660FAE2645B811006B2097 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */; };
+		D7980216264C6EA800B6FA6B /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7980215264C6EA800B6FA6B /* AuthenticationController.swift */; };
+		D798021D264C6F7000B6FA6B /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798021C264C6F7000B6FA6B /* AuthenticationModel.swift */; };
+		D7980239264DA7F500B6FA6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7980238264DA7F500B6FA6B /* HomeView.swift */; };
+		D7980245264DAA3C00B6FA6B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7980244264DAA3C00B6FA6B /* HomeViewModel.swift */; };
+		D7980249264DAB1300B6FA6B /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7980248264DAB1300B6FA6B /* HomeModel.swift */; };
+		D798024D264DBEB700B6FA6B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798024C264DBEB700B6FA6B /* HomeController.swift */; };
+		D7980251264DD2F800B6FA6B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7980250264DD2F800B6FA6B /* HomeCoordinator.swift */; };
+		D7E06CEC2652FA98009C5923 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06CEB2652FA98009C5923 /* HomeFactory.swift */; };
+		D7E06CF22652FADB009C5923 /* FactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06CF12652FADB009C5923 /* FactoryProtocol.swift */; };
+		D7E06CFA26546674009C5923 /* AuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06CF926546674009C5923 /* AuthenticationFactory.swift */; };
+		D7E06D0126546A54009C5923 /* MoodUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E06D0026546A54009C5923 /* MoodUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,17 @@
 		A9660F9C2645B309006B2097 /* mvvmArcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmArcTests.swift; sourceTree = "<group>"; };
 		A9660F9E2645B309006B2097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9660FAD2645B811006B2097 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		D7980215264C6EA800B6FA6B /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
+		D798021C264C6F7000B6FA6B /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		D7980238264DA7F500B6FA6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D7980244264DAA3C00B6FA6B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D7980248264DAB1300B6FA6B /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		D798024C264DBEB700B6FA6B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		D7980250264DD2F800B6FA6B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		D7E06CEB2652FA98009C5923 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		D7E06CF12652FADB009C5923 /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
+		D7E06CF926546674009C5923 /* AuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFactory.swift; sourceTree = "<group>"; };
+		D7E06D0026546A54009C5923 /* MoodUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +111,10 @@
 		A9660F67264180AB006B2097 /* mvvmArc */ = {
 			isa = PBXGroup;
 			children = (
+				A9660F7F2641DB66006B2097 /* Data */,
+				A9660F7E2641DB62006B2097 /* UseCases */,
+				D7E06CF8265462CB009C5923 /* Scenes */,
 				A9660F8526441DBC006B2097 /* Commom */,
-				A9660F7C2641DB4E006B2097 /* Authentication */,
 				A9660F68264180AB006B2097 /* AppDelegate.swift */,
 				A9660F71264180AE006B2097 /* Assets.xcassets */,
 				A9660F73264180AE006B2097 /* LaunchScreen.storyboard */,
@@ -102,8 +126,10 @@
 		A9660F7C2641DB4E006B2097 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				A9660F7F2641DB66006B2097 /* Data */,
-				A9660F7E2641DB62006B2097 /* Domain */,
+				D7E06CF52652FC4F009C5923 /* Factory */,
+				D798021B264C6F5C00B6FA6B /* Model */,
+				D7980214264C6E9100B6FA6B /* Controller */,
+				A9660F842641DBC3006B2097 /* Coordinator */,
 				A9660F7D2641DB5B006B2097 /* Presentation */,
 			);
 			path = Authentication;
@@ -112,19 +138,19 @@
 		A9660F7D2641DB5B006B2097 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A9660F842641DBC3006B2097 /* Coordinator */,
-				A9660F812641DB7E006B2097 /* ViewModel */,
-				A9660F802641DB7A006B2097 /* View */,
+				D798022A264C6FA100B6FA6B /* View */,
+				D7980222264C6F7F00B6FA6B /* ViewModel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		A9660F7E2641DB62006B2097 /* Domain */ = {
+		A9660F7E2641DB62006B2097 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				A9660F822641DB86006B2097 /* UseCase */,
+				D7E06CFF26546A3C009C5923 /* Mood */,
+				A9660F822641DB86006B2097 /* Authenticate */,
 			);
-			path = Domain;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		A9660F7F2641DB66006B2097 /* Data */ = {
@@ -135,28 +161,12 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		A9660F802641DB7A006B2097 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A9660F812641DB7E006B2097 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A9660F8C26442ACA006B2097 /* AuthenticationViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A9660F822641DB86006B2097 /* UseCase */ = {
+		A9660F822641DB86006B2097 /* Authenticate */ = {
 			isa = PBXGroup;
 			children = (
 				A9660F882644258E006B2097 /* AuthenticationUseCase.swift */,
 			);
-			path = UseCase;
+			path = Authenticate;
 			sourceTree = "<group>";
 		};
 		A9660F832641DB8B006B2097 /* Repository */ = {
@@ -180,6 +190,7 @@
 			children = (
 				A9660F8626441DC5006B2097 /* Observable.swift */,
 				A9660F8E26446058006B2097 /* Coordinator.swift */,
+				D7E06CF12652FADB009C5923 /* FactoryProtocol.swift */,
 			);
 			path = Commom;
 			sourceTree = "<group>";
@@ -256,6 +267,132 @@
 			children = (
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		D7980214264C6E9100B6FA6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D7980215264C6EA800B6FA6B /* AuthenticationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D798021B264C6F5C00B6FA6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D798021C264C6F7000B6FA6B /* AuthenticationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7980222264C6F7F00B6FA6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9660F8C26442ACA006B2097 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D798022A264C6FA100B6FA6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9660F6C264180AB006B2097 /* AuthenticationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7980231264DA78D00B6FA6B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D7E06CEA2652FA8C009C5923 /* Factory */,
+				D7980235264DA7B500B6FA6B /* Coordinator */,
+				D7980234264DA7AB00B6FA6B /* Presentation */,
+				D7980233264DA7A400B6FA6B /* Controller */,
+				D7980232264DA79800B6FA6B /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D7980232264DA79800B6FA6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7980248264DAB1300B6FA6B /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7980233264DA7A400B6FA6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D798024C264DBEB700B6FA6B /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7980234264DA7AB00B6FA6B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D7980237264DA7E700B6FA6B /* ViewModel */,
+				D7980236264DA7E200B6FA6B /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D7980235264DA7B500B6FA6B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D7980250264DD2F800B6FA6B /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D7980236264DA7E200B6FA6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7980238264DA7F500B6FA6B /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7980237264DA7E700B6FA6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7980244264DAA3C00B6FA6B /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7E06CEA2652FA8C009C5923 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D7E06CEB2652FA98009C5923 /* HomeFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D7E06CF52652FC4F009C5923 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D7E06CF926546674009C5923 /* AuthenticationFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D7E06CF8265462CB009C5923 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A9660F7C2641DB4E006B2097 /* Authentication */,
+				D7980231264DA78D00B6FA6B /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D7E06CFF26546A3C009C5923 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				D7E06D0026546A54009C5923 /* MoodUseCase.swift */,
+			);
+			path = Mood;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,12 +494,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7980216264C6EA800B6FA6B /* AuthenticationController.swift in Sources */,
+				D798021D264C6F7000B6FA6B /* AuthenticationModel.swift in Sources */,
+				D7980251264DD2F800B6FA6B /* HomeCoordinator.swift in Sources */,
+				D798024D264DBEB700B6FA6B /* HomeController.swift in Sources */,
 				A9660F8F26446058006B2097 /* Coordinator.swift in Sources */,
+				D7E06D0126546A54009C5923 /* MoodUseCase.swift in Sources */,
 				A9660F8726441DC5006B2097 /* Observable.swift in Sources */,
 				A9660F6D264180AB006B2097 /* AuthenticationViewController.swift in Sources */,
+				D7980239264DA7F500B6FA6B /* HomeView.swift in Sources */,
+				D7E06CFA26546674009C5923 /* AuthenticationFactory.swift in Sources */,
+				D7E06CF22652FADB009C5923 /* FactoryProtocol.swift in Sources */,
 				A9660F8D26442ACA006B2097 /* AuthenticationViewModel.swift in Sources */,
+				D7980245264DAA3C00B6FA6B /* HomeViewModel.swift in Sources */,
 				A9660F69264180AB006B2097 /* AppDelegate.swift in Sources */,
+				D7980249264DAB1300B6FA6B /* HomeModel.swift in Sources */,
 				A9660F8B264425B5006B2097 /* AuthenticationRepository.swift in Sources */,
+				D7E06CEC2652FA98009C5923 /* HomeFactory.swift in Sources */,
 				A9660F91264460AD006B2097 /* AuthenticationCoordinator.swift in Sources */,
 				A9660F892644258E006B2097 /* AuthenticationUseCase.swift in Sources */,
 			);
@@ -521,7 +669,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J73FLPX24B;
 				INFOPLIST_FILE = mvvmArc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +679,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zup.mvvmArc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -539,7 +689,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J73FLPX24B;
 				INFOPLIST_FILE = mvvmArc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +699,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zup.mvvmArc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

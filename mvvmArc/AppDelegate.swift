@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,16 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let authCoordinator = AuthenticationCoordinator(navigationController: UINavigationController())
+        let navigation = UINavigationController()
+//        navigation.isNavigationBarHidden = true
+        navigation.setViewControllers([AuthenticationFactory.make(with: navigation)], animated: false)
+//        let authCoordinator = AuthenticationCoordinator(navigationController: UINavigationController())
         
-        authCoordinator.navigationController.isNavigationBarHidden = true
-        window?.rootViewController = authCoordinator.navigationController
+//        authCoordinator.navigationController.isNavigationBarHidden = true
+        window?.rootViewController = navigation//authCoordinator.navigationController
         window?.makeKeyAndVisible()
         
-        authCoordinator.start()
+//        authCoordinator.start()
         
         return true
     }
 
 }
-

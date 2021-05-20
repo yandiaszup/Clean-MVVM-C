@@ -8,18 +8,6 @@
 import Foundation
 import Combine
 
-enum ScreenEvent {
-    case textChange(value: String)
-    case didTouchButton
-}
-
-enum ScreenState {
-    case idle
-    case loading
-    case error
-    case success
-}
-
 protocol AuthenticationViewModelInput {
     func setupEventListener(publisher: PassthroughSubject<ScreenEvent, Never>)
 }
@@ -30,15 +18,29 @@ protocol AuthenticationViewModelOutput {
     var observable: Observable<String> { get }
 }
 
-protocol AuthenticationViewModelProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput { }
+protocol ViewModelProtocol: class {
+    func setState(state: ScreenState)
+}
+
+protocol AuthenticationViewModelViewProtocol: AuthenticationViewModelInput, AuthenticationViewModelOutput {}
+
+protocol AuthenticationViewModelProtocol: AuthenticationViewModelViewProtocol, ViewModelProtocol { }
 
 class AuthenticationViewModel: AuthenticationViewModelProtocol {
     
+    func setState(state: ScreenState) {
+        switch state {
+        case .success:
+            coordinator?.login()
+        default:
+            return
+        }
+    }
+    
     // MARK: Dependencies
     
-    var authenticateUseCase: AuthenticateUseCaseProtocol? = AuthenticateUseCase()
-    
-    weak var coordinator: AuthenticationCoordinatorDelegate?
+    var coordinator: AuthenticationCoordinatorDelegate?
+    var controller: AuthenticationControllerProtocol?
     
     // MARK: ScreenViewModelOutput
     
@@ -82,16 +84,17 @@ class AuthenticationViewModel: AuthenticationViewModelProtocol {
     }
     
     private func didTouchButton() {
-        state = .loading
-        authenticateUseCase?.execute(
-            user: user,
-            password: "",
-            completion: { value in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    self.state = .success
-                }
-            }
-        )
+//        state = .loading
+        controller?.handleLogin(user: "", password: "")
+//        authenticateUseCase?.execute(
+//            user: user,
+//            password: "",
+//            completion: { value in
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                    self.state = .success
+//                }
+//            }
+//        )
     }
     
     // MARK: ScreenViewModelInput

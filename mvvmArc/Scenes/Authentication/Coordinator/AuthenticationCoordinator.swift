@@ -24,9 +24,12 @@ class AuthenticationCoordinator: Coordinator, AuthenticationCoordinatorDelegate 
     func start() {
         let vc = AuthenticationViewController()
         let viewModel = AuthenticationViewModel()
+        let controller = AuthenticationController()
+        vc.viewModel = viewModel
+        viewModel.controller = controller
+        controller.viewModel = viewModel
         
         viewModel.coordinator = self
-        vc.viewModel = viewModel
         
         navigationController.pushViewController(vc, animated: true)
     }
@@ -34,6 +37,7 @@ class AuthenticationCoordinator: Coordinator, AuthenticationCoordinatorDelegate 
     // MARK: AuthenticationCoordinatorProtocol
     
     func login() {
-        
+        let vc = HomeFactory.make(with: navigationController)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -26,7 +26,7 @@ class AuthenticationViewController: UIViewController {
     
     // MARK: Dependencies
     
-    var viewModel: AuthenticationViewModelProtocol?
+    var viewModel: AuthenticationViewModelViewProtocol?
     
     // MARK: Publishers
     
@@ -45,9 +45,9 @@ class AuthenticationViewController: UIViewController {
         view.addSubview(textField)
         view.addSubview(state)
         
-        button.frame = CGRect(x: 20, y: 100, width: 200, height: 50)
-        textField.frame = CGRect(x: 20, y: 20, width: 200, height: 50)
-        state.frame = CGRect(x: 20, y: 200, width: 200, height: 50)
+        button.frame = CGRect(x: 20, y: 200, width: 200, height: 50)
+        textField.frame = CGRect(x: 20, y: 120, width: 200, height: 50)
+        state.frame = CGRect(x: 20, y: 300, width: 200, height: 50)
         
         textField.addTarget(self, action: #selector(textfieldChange), for: .editingChanged)
         button.addTarget(self, action: #selector(didTouchButton), for: .touchUpInside)
